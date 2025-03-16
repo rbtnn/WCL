@@ -1,7 +1,5 @@
 var CACHE_NAME = 'swiftpanda.jp-pwa-caches';
-var urlsToCache = [
-  '/swiftpanda.jp/',
-];
+var urlsToCache = [];
 
 self.addEventListener('install', function(event) {
   event.waitUntil(

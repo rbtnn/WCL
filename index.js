@@ -25,7 +25,7 @@ app.use(session({
 
 app.get("/", (req, res) => {
   if (req.session.authenticated) {
-    res.render('./dashboard.ejs', { username: req.session.username });
+    res.render('./dashboard.ejs', { userid: req.session.userid });
   }
   else {
     res.render('./index.ejs');
@@ -33,11 +33,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/login/", (req, res) => {
-  let username = req.body?.username || "";
+  let userid = req.body?.userid || "";
   let password = req.body?.password || "";
-  if (username === "rbtnn" && password === "NGf.-zu!ZPhE6*nnoJ*c") {
+  if (userid === "rbtnn" && password === "NGf.-zu!ZPhE6*nnoJ*c") {
     req.session.authenticated = true;
-    req.session.username = username;
+    req.session.userid = userid;
   }
   res.redirect('/');
 });

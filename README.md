@@ -1,1 +1,1 @@
-# swiftpanda-jp
+# TypedPathsSync

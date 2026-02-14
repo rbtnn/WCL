@@ -1,1 +1,1 @@
-# TypedPathsSync
+# Windows Command Launcher

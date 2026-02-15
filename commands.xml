@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<WSL>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sigil>
   <Commands>
     <Item>
       <Name>「C:\\Windows」フォルダを開く</Name>
@@ -31,5 +31,10 @@
       <Command>https://www.google.com</Command>
       <Remarks></Remarks>
     </Item>
+    <Item>
+      <Name>dir /b</Name>
+      <Command>cmd /k dir /b</Command>
+      <Remarks>aaaaa</Remarks>
+    </Item>
   </Commands>
-</WSL>
+</Sigil>

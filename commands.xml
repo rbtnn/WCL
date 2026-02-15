@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WSL>
+  <Commands>
+    <Item>
+      <Name>「C:\\Windows」フォルダを開く</Name>
+      <Command>explorer.exe C:\\Windows</Command>
+      <Remarks>システムフォルダ</Remarks>
+    </Item>
+    <Item>
+      <Name>リモートデスクトップ接続(192.28.172.1)</Name>
+      <Command>mstsc /v:192.28.172.1</Command>
+      <Remarks>xxxサーバ</Remarks>
+    </Item>
+    <Item>
+      <Name>電卓</Name>
+      <Command>calc.exe</Command>
+      <Remarks>Windows標準電卓</Remarks>
+    </Item>
+    <Item>
+      <Name>コマンドプロンプト(管理者権限)</Name>
+      <Command>powershell.exe -Command "Start-Process -Verb runas cmd.exe"</Command>
+      <Remarks>aaaaa</Remarks>
+    </Item>
+    <Item>
+      <Name>コマンドプロンプト</Name>
+      <Command>cmd.exe</Command>
+      <Remarks></Remarks>
+    </Item>
+    <Item>
+      <Name>Googleを開く</Name>
+      <Command>https://www.google.com</Command>
+      <Remarks></Remarks>
+    </Item>
+  </Commands>
+</WSL>

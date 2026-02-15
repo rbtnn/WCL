@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 public class LauncherItemRow {
     public static Panel Create(CommandItem item, bool isFav, int width, Action onFavClick, Action onRunClick) {
-        Panel p = new Panel { Size = new Size(width - 25, 60), Margin = new Padding(0, 0, 0, 5) };
+        Panel p = new Panel { Size = new Size(width - 25, 55), Margin = new Padding(0, 0, 0, 5) };
 
         // お気に入り星
         Label lblFav = new Label {

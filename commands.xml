@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Sigil>
+<WCL>
   <Commands>
     <Item>
       <Name>「C:\\Windows」フォルダを開く</Name>
@@ -36,5 +36,10 @@
       <Command>cmd /k dir /b</Command>
       <Remarks>aaaaa</Remarks>
     </Item>
+    <Item>
+      <Name>shell:startup</Name>
+      <Command>shell:startup</Command>
+      <Remarks>aaaaa</Remarks>
+    </Item>
   </Commands>
-</Sigil>
+</WCL>

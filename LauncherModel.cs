@@ -31,29 +31,15 @@ public class LauncherModel {
         } catch { }
     }
 
-    public void LoadFavorites() {
-        if (File.Exists(favPath)) 
-            Favorites = new HashSet<string>(File.ReadAllLines(favPath));
-    }
-
+    public void LoadFavorites() { if (File.Exists(favPath)) Favorites = new HashSet<string>(File.ReadAllLines(favPath)); }
     public void ToggleFavorite(string name) {
-        if (Favorites.Contains(name)) Favorites.Remove(name);
-        else Favorites.Add(name);
+        if (Favorites.Contains(name)) Favorites.Remove(name); else Favorites.Add(name);
         File.WriteAllLines(favPath, Favorites.ToArray());
     }
-
-    public bool IsXmlChanged() {
-        if (!File.Exists(xmlPath)) return false;
-        return File.GetLastWriteTime(xmlPath) != LastXmlWriteTime;
-    }
-
+    public bool IsXmlChanged() { return File.Exists(xmlPath) && File.GetLastWriteTime(xmlPath) != LastXmlWriteTime; }
     public List<CommandItem> GetFilteredList(string query) {
         string q = query.ToLower();
-        return AllItems
-            .Where(i => i.Name.ToLower().Contains(q) || 
-                       (i.Remarks != null && i.Remarks.ToLower().Contains(q)) ||
-                       (i.Command != null && i.Command.ToLower().Contains(q)))
-            .OrderByDescending(i => Favorites.Contains(i.Name))
-            .ToList();
+        return AllItems.Where(i => i.Name.ToLower().Contains(q) || (i.Remarks != null && i.Remarks.ToLower().Contains(q)) || (i.Command != null && i.Command.ToLower().Contains(q)))
+            .OrderByDescending(i => Favorites.Contains(i.Name)).ToList();
     }
 }
